@@ -1,47 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-<title>My Favorite Planet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Chen - Personal Profile</title>
+  <style>
+    /* 基礎重設 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      border: 1px solid #000000;
+    }
+
+    /* 標頭區域 */
+    header {
+      text-align: center;
+      padding: 20px;
+      border-bottom: 1px solid #000000;
+      background-color: #ffffff;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    /* 圖片區域 */
+    .hero-section {
+      text-align: center;
+      padding: 20px;
+      border-bottom: 1px solid #000000;
+      background-color: #ffffff;
+    }
+
+    .hero-image {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      border: 1px solid #000000;
+    }
+
+    .hero-caption {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    /* 2x2 網格佈局 */
+    .grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-box {
+      padding: 20px;
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+      background-color: #ffffff;
+    }
+
+    .grid-box:nth-child(2n) {
+      border-right: none;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #000000;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    /* 語意標籤樣式 */
+    ins {
+      background-color: transparent;
+      color: #000000;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    del {
+      color: #666666;
+    }
+
+    /* 連結狀態設定 */
+    a:link {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #551a8b;
+    }
+
+    a:hover {
+      color: #ff0000;
+    }
+
+    a:active {
+      color: #000000;
+    }
+
+    /* 頁尾聯絡區域 */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    footer h2 {
+      border-bottom: none;
+      margin-bottom: 5px;
+    }
+
+    address {
+      font-style: normal;
+      font-size: 0.95rem;
+    }
+
+    /* 響應式手機版面 */
+    @media (max-width: 600px) {
+      .grid-2x2 {
+        grid-template-columns: 1fr;
+      }
+      .grid-box {
+        border-right: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<h1>My Favorite Planet</h1>
+  <div class="container">
+    <!-- 1. Header Section -->
+    <header>
+      <h1>Alex Chen</h1>
+      <p><em>Frontend Developer & Web Designer</em></p>
+      <p>Taipei, Taiwan | Available for Freelance Projects</p>
+    </header>
 
-<h2>Mars</h2>
+    <!-- 2. Hero Image Section -->
+    <div class="hero-section">
+      <a href="https://www.youtube.com/" target="_blank">
+        <img 
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/93.png" 
+          alt="Haunter Avatar" 
+          class="hero-image"
+        >
+      </a>
+      <p class="hero-caption">Click image to visit YouTube channel.</p>
+    </div>
 
-<p>Mars is the <b>fourth</b> planet from the Sun.</p>
-<p>I think Mars is <i>one of the most interesting planets</i> in our solar system.</p>
+    <!-- 3. 2x2 Grid Layout -->
+    <div class="grid-2x2">
+      
+      <!-- Box 1: About Me -->
+      <div class="grid-box">
+        <h2>About Me</h2>
+        <p>Hello! I am <strong>Alex Chen</strong>, a web developer based in Taipei.</p>
+        <p>I specialize in building clean, functional, and responsive websites using modern web standard technologies.</p>
+        <p><em>"Keep it simple and readable."</em></p>
+      </div>
 
-<hr>
+      <!-- Box 2: Core Skills -->
+      <div class="grid-box">
+        <h2>Core Skills</h2>
+        <ul>
+          <li>HTML5 & Semantic Markup</li>
+          <li>CSS3 & Responsive Grid Layouts</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Git Version Control & GitHub Pages</li>
+        </ul>
+      </div>
 
-<h2>Some Facts</h2>
+      <!-- Box 3: Work & Status -->
+      <div class="grid-box">
+        <h2>Work Experience</h2>
+        <p><strong>2024 - Present</strong>: Freelance Web Developer</p>
+        <p><strong>2022 - 2024</strong>: Junior Web Developer</p>
+        <p style="margin-top: 10px;">
+          Current Status:<br>
+          <del>Fully booked until November</del><br>
+          <ins>Now open for new projects!</ins>
+        </p>
+      </div>
 
-<p>Mars has 2 moons:<br>
-Phobos<br>
-Deimos</p>
+      <!-- Box 4: Services -->
+      <div class="grid-box">
+        <h2>Services & Pricing</h2>
+        <p>Standard Web Design: <del>NT$30,000</del></p>
+        <p>Special Rate: <strong>NT$20,000</strong></p>
+        <p>Includes responsive design, clean code structure, and setup.</p>
+        <p style="margin-top: 10px;">
+          <a href="https://www.youtube.com/" target="_blank">View Project Samples →</a>
+        </p>
+      </div>
 
-<p>The average distance from Mars to the Sun is about 2.28 x 10<sup>8</sup> km.</p>
+    </div>
 
-<p>Water is H<sub>2</sub>O.</p>
-
-<hr>
-
-<h2>Why I Like Mars</h2>
-
-<p>Mars is cold and dry,<br>
-but scientists are still exploring it.</p>
-
-<p><b>Maybe humans will visit Mars one day!</b></p>
-
-<hr>
-
-<h2>Keep Exploring</h2>
-
-<p><b>Remember:</b> science begins with curiosity.</p>
-
-<p><i><font color="purple">I really</font></i> want to see humans explore Mars in the future.</p>
-
-<p><u>NASA</u> has sent many missions to study Mars.</p>
+    <!-- 4. Contact Us Section -->
+    <footer>
+      <h2>Contact Me</h2>
+      <address>
+        <p><strong>Alex Chen Studio</strong></p>
+        <p>Da'an District, Taipei City, Taiwan</p>
+        <p>
+          Email: <a href="mailto:alex.chen@example.com">alex.chen@example.com</a> | 
+          Tel: <a href="tel:+886912345678">+886-912-345-678</a>
+        </p>
+      </address>
+    </footer>
+  </div>
 
 </body>
 </html>
