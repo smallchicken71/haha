@@ -1,243 +1,172 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Chen - Personal Profile</title>
-  <style>
-    /* 基礎重設 */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation & List Exercise</title>
+    <style>
+        body {
+            font-family: Times New Roman, serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-      line-height: 1.5;
-      padding: 20px;
-    }
+        /* ===== 頂部導覽列 (Navbar) 樣式 ===== */
+        .navbar-container {
+            background-color: #008000; /* 綠色背景 */
+            width: 100%;
+            overflow: hidden;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      border: 1px solid #000000;
-    }
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
 
-    /* 標頭區域 */
-    header {
-      text-align: center;
-      padding: 20px;
-      border-bottom: 1px solid #000000;
-      background-color: #ffffff;
-    }
+        .navbar li {
+            float: left;
+        }
 
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
+        .navbar li a {
+            display: block;
+            color: #ccff00; /* 黃綠色文字 */
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            /* 白色波浪底線 */
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: white;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+        }
 
-    header p {
-      font-size: 1rem;
-    }
+        /* 懸停 (Hover)：深綠色 */
+        .navbar li a:hover {
+            background-color: #005500;
+        }
 
-    /* 圖片區域 */
-    .hero-section {
-      text-align: center;
-      padding: 20px;
-      border-bottom: 1px solid #000000;
-      background-color: #ffffff;
-    }
+        /* 點擊瞬間 (Active) */
+        .navbar li a:active {
+            background-color: #000000;
+            color: #ffffff;
+        }
 
-    .hero-image {
-      width: 180px;
-      height: 180px;
-      object-fit: contain;
-      border: 1px solid #000000;
-    }
+        /* 被選中的頁籤 */
+        .navbar li a.active-tab {
+            background-color: #1a1a1a;
+        }
 
-    .hero-caption {
-      font-size: 0.9rem;
-      margin-top: 10px;
-    }
+        /* ===== 內容顯示區域 ===== */
+        .content-section {
+            padding: 20px 10px;
+        }
 
-    /* 2x2 網格佈局 */
-    .grid-2x2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+        /* 預設隱藏所有分頁內容 */
+        .page-content {
+            display: none;
+        }
 
-    .grid-box {
-      padding: 20px;
-      border-right: 1px solid #000000;
-      border-bottom: 1px solid #000000;
-      background-color: #ffffff;
-    }
+        /* 當前作用中的內容頁面才顯示 */
+        .page-content.active {
+            display: block;
+        }
 
-    .grid-box:nth-child(2n) {
-      border-right: none;
-    }
+        /* 巢狀清單樣式 */
+        ul.outer-list {
+            list-style-type: square;
+            font-size: 20px;
+            line-height: 1.5;
+            padding-left: 40px;
+            margin-top: 15px;
+        }
 
-    h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #000000;
-      padding-bottom: 5px;
-    }
-
-    p {
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-    }
-
-    ul {
-      margin-left: 20px;
-      margin-bottom: 10px;
-      font-size: 0.95rem;
-    }
-
-    /* 語意標籤樣式 */
-    ins {
-      background-color: transparent;
-      color: #000000;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    del {
-      color: #666666;
-    }
-
-    /* 連結狀態設定 */
-    a:link {
-      color: #0000ee;
-      text-decoration: underline;
-    }
-
-    a:visited {
-      color: #551a8b;
-    }
-
-    a:hover {
-      color: #ff0000;
-    }
-
-    a:active {
-      color: #000000;
-    }
-
-    /* 頁尾聯絡區域 */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #ffffff;
-    }
-
-    footer h2 {
-      border-bottom: none;
-      margin-bottom: 5px;
-    }
-
-    address {
-      font-style: normal;
-      font-size: 0.95rem;
-    }
-
-    /* 響應式手機版面 */
-    @media (max-width: 600px) {
-      .grid-2x2 {
-        grid-template-columns: 1fr;
-      }
-      .grid-box {
-        border-right: none;
-      }
-    }
-  </style>
+        ul.inner-list {
+            list-style-type: circle;
+            font-size: 18px;
+            padding-left: 30px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- 1. Header Section -->
-    <header>
-      <h1>Alex Chen</h1>
-      <p><em>Frontend Developer & Web Designer</em></p>
-      <p>Taipei, Taiwan | Available for Freelance Projects</p>
-    </header>
-
-    <!-- 2. Hero Image Section -->
-    <div class="hero-section">
-      <a href="https://www.youtube.com/" target="_blank">
-        <img 
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/93.png" 
-          alt="Haunter Avatar" 
-          class="hero-image"
-        >
-      </a>
-      <p class="hero-caption">Click image to visit YouTube channel.</p>
-    </div>
-
-    <!-- 3. 2x2 Grid Layout -->
-    <div class="grid-2x2">
-      
-      <!-- Box 1: About Me -->
-      <div class="grid-box">
-        <h2>About Me</h2>
-        <p>Hello! I am <strong>Alex Chen</strong>, a web developer based in Taipei.</p>
-        <p>I specialize in building clean, functional, and responsive websites using modern web standard technologies.</p>
-        <p><em>"Keep it simple and readable."</em></p>
-      </div>
-
-      <!-- Box 2: Core Skills -->
-      <div class="grid-box">
-        <h2>Core Skills</h2>
-        <ul>
-          <li>HTML5 & Semantic Markup</li>
-          <li>CSS3 & Responsive Grid Layouts</li>
-          <li>JavaScript (ES6+)</li>
-          <li>Git Version Control & GitHub Pages</li>
+    <!-- 導覽列 -->
+    <div class="navbar-container">
+        <ul class="navbar">
+            <li><a onclick="showTab('home', this)" class="active-tab">Home</a></li>
+            <li><a onclick="showTab('news', this)">News</a></li>
+            <li><a onclick="showTab('contact', this)">Contact</a></li>
+            <li><a onclick="showTab('schedule', this)">Schedule</a></li>
+            <li><a onclick="showTab('about', this)">About</a></li>
         </ul>
-      </div>
+    </div>
 
-      <!-- Box 3: Work & Status -->
-      <div class="grid-box">
-        <h2>Work Experience</h2>
-        <p><strong>2024 - Present</strong>: Freelance Web Developer</p>
-        <p><strong>2022 - 2024</strong>: Junior Web Developer</p>
-        <p style="margin-top: 10px;">
-          Current Status:<br>
-          <del>Fully booked until November</del><br>
-          <ins>Now open for new projects!</ins>
-        </p>
-      </div>
+    <!-- 內容顯示區域 -->
+    <div class="content-section">
+        
+        <!-- Home 頁面內容 (題目的巢狀清單) -->
+        <div id="home" class="page-content active">
+            <ul class="outer-list">
+                <li>Mousses</li>
+                <li>Pastries
+                    <ul class="inner-list">
+                        <li>Croissant</li>
+                        <li>Milles-feuille</li>
+                        <li>Palmier</li>
+                        <li>Profiteroles</li>
+                    </ul>
+                </li>
+                <li>Tarts</li>
+            </ul>
+        </div>
 
-      <!-- Box 4: Services -->
-      <div class="grid-box">
-        <h2>Services & Pricing</h2>
-        <p>Standard Web Design: <del>NT$30,000</del></p>
-        <p>Special Rate: <strong>NT$20,000</strong></p>
-        <p>Includes responsive design, clean code structure, and setup.</p>
-        <p style="margin-top: 10px;">
-          <a href="https://www.youtube.com/" target="_blank">View Project Samples →</a>
-        </p>
-      </div>
+        <!-- News 頁面內容 -->
+        <div id="news" class="page-content">
+            <h2>News Section</h2>
+            <p>Welcome to the Latest News page.</p>
+        </div>
+
+        <!-- Contact 頁面內容 -->
+        <div id="contact" class="page-content">
+            <h2>Contact Us</h2>
+            <p>Email: contact@example.com</p>
+        </div>
+
+        <!-- Schedule 頁面內容 -->
+        <div id="schedule" class="page-content">
+            <h2>Schedule</h2>
+            <p>Opening hours: Mon - Fri 09:00 - 18:00</p>
+        </div>
+
+        <!-- About 頁面內容 -->
+        <div id="about" class="page-content">
+            <h2>About Us</h2>
+            <p>Learn more about our bakery and recipes.</p>
+        </div>
 
     </div>
 
-    <!-- 4. Contact Us Section -->
-    <footer>
-      <h2>Contact Me</h2>
-      <address>
-        <p><strong>Alex Chen Studio</strong></p>
-        <p>Da'an District, Taipei City, Taiwan</p>
-        <p>
-          Email: <a href="mailto:alex.chen@example.com">alex.chen@example.com</a> | 
-          Tel: <a href="tel:+886912345678">+886-912-345-678</a>
-        </p>
-      </address>
-    </footer>
-  </div>
+    <script>
+        function showTab(tabId, element) {
+            // 隱藏所有頁面內容
+            const contents = document.querySelectorAll('.page-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // 移除所有按鈕的選中樣式
+            const tabs = document.querySelectorAll('.navbar li a');
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+
+            // 顯示被點擊的頁面內容與加上選中樣式
+            document.getElementById(tabId).classList.add('active');
+            element.classList.add('active-tab');
+        }
+    </script>
 
 </body>
 </html>
