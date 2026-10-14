@@ -1,172 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation & List Exercise</title>
-    <style>
-        body {
-            font-family: Times New Roman, serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #ffffff;
-        }
+  <meta charset="UTF-8">
+  <title>The Quokka</title>
+  <style>
+    /* 讓圖片寬度固定為 250px 並加上圓角 */
+    img {
+      width: 250px;
+      border-radius: 10px; /* 呈現圓角效果 */
+    }
 
-        /* ===== 頂部導覽列 (Navbar) 樣式 ===== */
-        .navbar-container {
-            background-color: #008000; /* 綠色背景 */
-            width: 100%;
-            overflow: hidden;
-        }
+    /* 第一張圖片：靠右浮動，並設置與文字的間距 */
+    .img-right {
+      float: right;
+      margin-left: 15px;
+      margin-bottom: 10px;
+    }
 
-        .navbar {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+    /* 第二張圖片：靠左浮動，並設置與文字的間距 */
+    .img-left {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 10px;
+    }
 
-        .navbar li {
-            float: left;
-        }
-
-        .navbar li a {
-            display: block;
-            color: #ccff00; /* 黃綠色文字 */
-            text-align: center;
-            padding: 14px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            /* 白色波浪底線 */
-            text-decoration: underline;
-            text-decoration-style: wavy;
-            text-decoration-color: white;
-            cursor: pointer;
-            transition: background-color 0.15s ease;
-        }
-
-        /* 懸停 (Hover)：深綠色 */
-        .navbar li a:hover {
-            background-color: #005500;
-        }
-
-        /* 點擊瞬間 (Active) */
-        .navbar li a:active {
-            background-color: #000000;
-            color: #ffffff;
-        }
-
-        /* 被選中的頁籤 */
-        .navbar li a.active-tab {
-            background-color: #1a1a1a;
-        }
-
-        /* ===== 內容顯示區域 ===== */
-        .content-section {
-            padding: 20px 10px;
-        }
-
-        /* 預設隱藏所有分頁內容 */
-        .page-content {
-            display: none;
-        }
-
-        /* 當前作用中的內容頁面才顯示 */
-        .page-content.active {
-            display: block;
-        }
-
-        /* 巢狀清單樣式 */
-        ul.outer-list {
-            list-style-type: square;
-            font-size: 20px;
-            line-height: 1.5;
-            padding-left: 40px;
-            margin-top: 15px;
-        }
-
-        ul.inner-list {
-            list-style-type: circle;
-            font-size: 18px;
-            padding-left: 30px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-    </style>
+    /* 清除浮動影響，確保段落標題間的排版整齊 */
+    h2 {
+      clear: both;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- 導覽列 -->
-    <div class="navbar-container">
-        <ul class="navbar">
-            <li><a onclick="showTab('home', this)" class="active-tab">Home</a></li>
-            <li><a onclick="showTab('news', this)">News</a></li>
-            <li><a onclick="showTab('contact', this)">Contact</a></li>
-            <li><a onclick="showTab('schedule', this)">Schedule</a></li>
-            <li><a onclick="showTab('about', this)">About</a></li>
-        </ul>
-    </div>
+  <h1>The Quokka</h1>
+  <p>
+    <img src="images.jpg" alt="Quokka" class="img-right">
+    The quokka is a small marsupial native to Australia. It is well known for its friendly appearance and often looks like it is smiling. Quokkas usually live on islands and coastal areas, and they are most active at night.
+  </p>
 
-    <!-- 內容顯示區域 -->
-    <div class="content-section">
-        
-        <!-- Home 頁面內容 (題目的巢狀清單) -->
-        <div id="home" class="page-content active">
-            <ul class="outer-list">
-                <li>Mousses</li>
-                <li>Pastries
-                    <ul class="inner-list">
-                        <li>Croissant</li>
-                        <li>Milles-feuille</li>
-                        <li>Palmier</li>
-                        <li>Profiteroles</li>
-                    </ul>
-                </li>
-                <li>Tarts</li>
-            </ul>
-        </div>
-
-        <!-- News 頁面內容 -->
-        <div id="news" class="page-content">
-            <h2>News Section</h2>
-            <p>Welcome to the Latest News page.</p>
-        </div>
-
-        <!-- Contact 頁面內容 -->
-        <div id="contact" class="page-content">
-            <h2>Contact Us</h2>
-            <p>Email: contact@example.com</p>
-        </div>
-
-        <!-- Schedule 頁面內容 -->
-        <div id="schedule" class="page-content">
-            <h2>Schedule</h2>
-            <p>Opening hours: Mon - Fri 09:00 - 18:00</p>
-        </div>
-
-        <!-- About 頁面內容 -->
-        <div id="about" class="page-content">
-            <h2>About Us</h2>
-            <p>Learn more about our bakery and recipes.</p>
-        </div>
-
-    </div>
-
-    <script>
-        function showTab(tabId, element) {
-            // 隱藏所有頁面內容
-            const contents = document.querySelectorAll('.page-content');
-            contents.forEach(content => content.classList.remove('active'));
-
-            // 移除所有按鈕的選中樣式
-            const tabs = document.querySelectorAll('.navbar li a');
-            tabs.forEach(tab => tab.classList.remove('active-tab'));
-
-            // 顯示被點擊的頁面內容與加上選中樣式
-            document.getElementById(tabId).classList.add('active');
-            element.classList.add('active-tab');
-        }
-    </script>
+  <h2>Where They Live</h2>
+  <p>
+    <img src="images (2).jpg" alt="Beach on Rottnest Island" class="img-left">
+    Quokkas are mainly found on Rottnest Island and some other nearby islands in Western Australia. They live in bushland, grasslands, and coastal areas where there is plenty of food and shelter.
+  </p>
 
 </body>
 </html>
