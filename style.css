@@ -1,0 +1,576 @@
+/* =========================
+   1. Global Styles
+========================= */
+
+:root {
+    --background: #fffdf9;
+    --text: #352c29;
+    --muted: #746b65;
+    --accent: #a95e49;
+    --page-width: 1080px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page {
+    width: min(100% - 80px, var(--page-width));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 82px 0;
+}
+
+.section-number {
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -1.3px;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: clamp(30px, 3.1vw, 43px);
+    line-height: 1.25;
+}
+
+p {
+    color: var(--muted);
+}
+
+
+/* =========================
+   2. Navigation Bar
+========================= */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 66px;
+    background-color: rgba(255, 253, 249, 0.97);
+    border-bottom: 1px solid #eee9e2;
+}
+
+.nav-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    list-style: none;
+}
+
+.nav a {
+    position: relative;
+    padding: 8px 0;
+    color: #38322f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+}
+
+.nav a:hover {
+    color: var(--accent);
+}
+
+.nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    left: 0;
+    height: 1px;
+    background-color: var(--accent);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================
+   3. Hero Section
+========================= */
+
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 470px;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(
+        "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=2000&q=90"
+    );
+    background-position: center 48%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(18, 25, 35, 0.83) 0%,
+        rgba(18, 25, 35, 0.58) 46%,
+        rgba(18, 25, 35, 0.24) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 60px 0;
+}
+
+.eyebrow {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.hero h1 {
+    max-width: 600px;
+    color: #fffdfb;
+    font-size: clamp(54px, 7vw, 84px);
+    line-height: 1.04;
+    letter-spacing: -2px;
+}
+
+.hero-line {
+    width: 42px;
+    height: 1px;
+    margin: 24px 0 16px;
+    background-color: #d6b9a5;
+}
+
+.hero-description {
+    max-width: 390px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   4. Discover Section
+========================= */
+
+.discover {
+    background-color: var(--background);
+}
+
+.discover h2 {
+    margin-bottom: 30px;
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.discover-text h3,
+.neighborhood-text h3 {
+    margin-bottom: 17px;
+    color: #49413c;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.discover-text p,
+.neighborhood-text p {
+    margin-bottom: 15px;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.discover-text .quote {
+    margin-top: 20px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.discover-image {
+    height: 270px;
+    border-radius: 3px;
+}
+
+
+/* =========================
+   5. Neighborhoods Section
+========================= */
+
+.neighborhoods {
+    background-color: #fbf8f2;
+}
+
+.neighborhoods h2 {
+    margin-bottom: 30px;
+}
+
+.neighborhood-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 38px;
+}
+
+.neighborhood-image {
+    height: 285px;
+    border-radius: 3px;
+}
+
+.neighborhood-text {
+    padding-top: 2px;
+}
+
+
+/* =========================
+   6. Image Hover Effect
+========================= */
+
+.image-hover {
+    overflow: hidden;
+}
+
+.image-hover img {
+    transition: transform 0.6s ease;
+}
+
+.image-hover:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   7. Gallery Section
+========================= */
+
+.gallery {
+    background-color: #fff;
+}
+
+.gallery-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 28px;
+}
+
+.gallery-heading h2 {
+    margin-bottom: 0;
+}
+
+.gallery-intro {
+    max-width: 270px;
+    padding-bottom: 5px;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.gallery-card {
+    min-width: 0;
+}
+
+.gallery-image {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: #e9e3db;
+}
+
+.gallery-image img {
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(28, 31, 35, 0.68);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-overlay span {
+    margin-bottom: 12px;
+    color: #e5c2a8;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.gallery-overlay h3 {
+    margin-bottom: 8px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.gallery-overlay p {
+    color: #f1efeb;
+    font-size: 11px;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.06);
+    filter: saturate(0.8);
+}
+
+.gallery-caption {
+    margin-top: 13px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+
+/* =========================
+   8. Footer
+========================= */
+
+.footer {
+    padding: 30px 0;
+    background-color: #292725;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer .brand {
+    color: #fffdf9;
+}
+
+.footer p {
+    color: #c5bdb5;
+    font-size: 11px;
+}
+
+.back-to-top {
+    color: #e4d5c8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.back-to-top:hover {
+    color: white;
+}
+
+
+/* =========================
+   9. Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+    .page {
+        width: calc(100% - 40px);
+    }
+
+    .section {
+        padding: 58px 0;
+    }
+
+    .topbar {
+        height: 62px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 9px;
+        letter-spacing: 0.3px;
+    }
+
+    .hero {
+        min-height: 420px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 10vw, 68px);
+    }
+
+    .discover-grid,
+    .neighborhood-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .discover-image {
+        height: 280px;
+    }
+
+    .neighborhood-image {
+        height: 280px;
+    }
+
+    .gallery-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .gallery-intro {
+        max-width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .gallery-image {
+        height: 270px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        width: calc(100% - 32px);
+    }
+
+    .section {
+        padding: 45px 0;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 8px;
+    }
+
+    .hero {
+        min-height: 390px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        max-width: 300px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .discover-image,
+    .neighborhood-image {
+        height: 220px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-image {
+        height: 320px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
