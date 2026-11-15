@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="大學生存指南：給大學新生的課業、飲食與生活入門網站。">
+  <title>首頁 | 大學生存指南</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">U</span> UNI GUIDE <span class="brand-sub">大學生存指南</span></a>
+      <nav aria-label="主要導覽">
+        <ul class="nav-links">
+          <li><a class="active" aria-current="page" href="index.html">首頁</a></li>
+          <li><a href="study.html">課業規劃</a></li>
+          <li><a href="food.html">飲食生活</a></li>
+          <li><a href="quiz.html">生存測驗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">MY DIGITAL GUIDE / 2026</p>
+        <h1>大學生活，<br><span class="accent">從這裡開始。</span></h1>
+        <p class="hero-intro">上大學很自由，也有很多事情要自己安排。這份簡單的指南，幫你把課業、吃飯和生活節奏慢慢整理好。</p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="study.html">開始規劃課業 <span aria-hidden="true">→</span></a>
+          <a class="btn btn-secondary" href="quiz.html">挑戰小測驗</a>
+        </div>
+        <p class="hero-note">為剛進大學、想建立自己步調的你準備。</p>
+      </div>
+      <div class="hero-visual">
+        <img src="images/campus-life.png" alt="大學生拿著書本走在有樹木與教學大樓的校園插畫">
+        <div class="visual-tag">LEARN · EAT · EXPLORE</div>
+      </div>
+    </section>
+
+    <section class="section shell" id="explore">
+      <div class="section-heading">
+        <div><p class="eyebrow">EXPLORE YOUR CAMPUS LIFE</p><h2>四個方向，準備好你的大學生活</h2></div>
+        <p>不知道先做什麼？從你現在最需要的主題開始。</p>
+      </div>
+      <!-- Required 2 x 2 HTML div grid: four meaningful cells. -->
+      <div class="quick-grid">
+        <div class="quick-card card-peach">
+          <span class="card-number">01 / START</span>
+          <span class="card-icon" aria-hidden="true">☀</span>
+          <h3>新生起步</h3>
+          <p>先認識學校系統、重要日期和自己的生活節奏。</p>
+          <a href="#starter-checklist">查看新生清單 →</a>
+        </div>
+        <div class="quick-card card-teal">
+          <span class="card-number">02 / STUDY</span>
+          <span class="card-icon" aria-hidden="true">✎</span>
+          <h3>課業規劃</h3>
+          <p>看讀書安排建議，再用小工具計算每週時數。</p>
+          <a href="study.html">打開規劃工具 →</a>
+        </div>
+        <div class="quick-card card-yellow">
+          <span class="card-number">03 / LIFE</span>
+          <span class="card-icon" aria-hidden="true">♡</span>
+          <h3>飲食生活</h3>
+          <p>用簡單原則安排三餐，也記得顧好作息。</p>
+          <a href="food.html">閱讀生活建議 →</a>
+        </div>
+        <div class="quick-card card-blue">
+          <span class="card-number">04 / QUIZ</span>
+          <span class="card-icon" aria-hidden="true">?</span>
+          <h3>生存測驗</h3>
+          <p>四道小問題，測試你遇到校園狀況時會怎麼做。</p>
+          <a href="quiz.html">開始回答 →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="starter-checklist">
+      <div class="shell split-layout">
+        <div>
+          <p class="eyebrow">FIRST WEEK CHECKLIST</p>
+          <h2>新生第一週，<br>先完成這幾件事</h2>
+          <p class="body-copy">不用一次把所有事情做好。先處理重要的，再慢慢找到自己的方式。</p>
+          <a class="text-link" href="https://www.edu.tw/" target="_blank" rel="noopener noreferrer">教育部官方網站（校外資訊） ↗</a>
+        </div>
+        <div class="checklist-panel">
+          <ol class="starter-list">
+            <li><strong>確認課表</strong><span>記下上課時間、教室與老師的規定。</span></li>
+            <li><strong>熟悉校園</strong><span>找找圖書館、餐廳、行政處室的位置。</span></li>
+            <li><strong>記錄截止日</strong><span>把作業、考試、選課時間放進行事曆。</span></li>
+            <li><strong>留給自己休息</strong><span>除了讀書，也要安排吃飯、運動與睡眠。</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><p>UNI GUIDE · My Digital Guide</p><p>Web Programming Midterm Project · 2026</p><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">回到頂部 ↑</a></div></footer>
+</body>
+</html>
