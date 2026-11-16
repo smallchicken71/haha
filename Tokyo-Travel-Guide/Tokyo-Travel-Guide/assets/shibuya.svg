@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="澀谷十字路口插畫">
+  <rect width="720" height="420" fill="#dce9e9"/>
+  <rect x="20" y="110" width="122" height="217" fill="#789aaa"/><rect x="153" y="40" width="135" height="284" fill="#345668"/><rect x="305" y="92" width="115" height="239" fill="#9e6268"/><rect x="439" y="48" width="125" height="278" fill="#53788a"/><rect x="580" y="130" width="117" height="202" fill="#d59a80"/>
+  <g fill="#f8dfbe"><rect x="49" y="147" width="20" height="28"/><rect x="85" y="147" width="20" height="28"/><rect x="186" y="87" width="21" height="25"/><rect x="236" y="87" width="21" height="25"/><rect x="335" y="140" width="23" height="27"/><rect x="474" y="89" width="20" height="25"/><rect x="518" y="89" width="20" height="25"/><rect x="606" y="165" width="22" height="28"/></g>
+  <path d="M0 331 L720 331 720 420 0 420 Z" fill="#4d5d66"/>
+  <g fill="#fff7ee"><path d="M0 348 L76 348 41 420 0 420 Z"/><path d="M115 348 L177 348 154 420 76 420 Z"/><path d="M211 348 L270 348 264 420 192 420 Z"/><path d="M304 348 L363 348 379 420 305 420 Z"/><path d="M398 348 L457 348 496 420 418 420 Z"/><path d="M495 348 L555 348 612 420 532 420 Z"/><path d="M595 348 L655 348 720 407 720 420 651 420 Z"/></g>
+  <rect x="194" y="194" width="82" height="43" rx="5" fill="#f4c69a"/><text x="209" y="223" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#3d5865">TOKYO</text>
+  <text x="22" y="401" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#b64b50" letter-spacing="2">SHIBUYA</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="上野公園櫻花與池塘插畫">
+  <rect width="720" height="420" fill="#ddedf0"/>
+  <circle cx="598" cy="78" r="45" fill="#ffdfba"/>
+  <path d="M0 300 Q180 255 360 297 T720 298 V420 H0 Z" fill="#9ac5a2"/>
+  <path d="M0 342 Q170 320 360 343 T720 344 V420 H0 Z" fill="#8bbbc1"/>
+  <path d="M70 276 Q170 225 270 275 Q335 286 385 271 Q460 231 540 273" fill="none" stroke="#a76d67" stroke-width="23"/>
+  <path d="M105 285 L105 319 M516 280 L516 310" stroke="#a76d67" stroke-width="12"/>
+  <g stroke="#775c50" stroke-width="18"><path d="M118 273 V148 M118 190 L63 136 M118 184 L176 122"/><path d="M559 282 V157 M559 195 L510 140 M559 187 L620 122"/></g>
+  <g fill="#f5b9bf"><circle cx="72" cy="126" r="51"/><circle cx="141" cy="112" r="57"/><circle cx="180" cy="147" r="42"/><circle cx="522" cy="118" r="48"/><circle cx="582" cy="110" r="55"/><circle cx="633" cy="154" r="39"/></g>
+  <g fill="#fff3ef" opacity=".7"><circle cx="112" cy="129" r="12"/><circle cx="157" cy="150" r="9"/><circle cx="552" cy="136" r="11"/><circle cx="612" cy="121" r="8"/></g>
+  <path d="M0 384 Q180 367 345 386 T720 384" stroke="#d4ebe9" stroke-width="4" fill="none"/>
+  <rect x="0" y="392" width="720" height="28" fill="#44656d"/>
+  <text x="24" y="413" font-family="Arial,sans-serif" font-size="19" font-weight="bold" fill="#fff" letter-spacing="3">UENO PARK</text>
+</svg>

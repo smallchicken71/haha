@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="東京三日自由行範例，可按按鈕切換每天的行程內容。">
+  <title>三日行程 | 東京輕旅行指南</title>
+  <link rel="stylesheet" href="css/style.css"><script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="shell nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">T</span> TOKYO GUIDE <small>我的東京輕旅行指南</small></a>
+    <nav aria-label="主要導覽"><ul class="nav-links">
+      <li><a href="index.html">首頁</a></li><li><a href="spots.html">推薦景點</a></li><li><a class="active" aria-current="page" href="itinerary.html">三日行程</a></li><li><a href="budget.html">飯店與預算</a></li>
+    </ul></nav>
+  </div></header>
+  <main>
+    <section class="page-intro shell"><div><p class="eyebrow">THREE-DAY TRIP</p><h1>東京三日行程</h1><p>這是第一次東京自由行的範例。把距離較近的景點放在同一天，減少移動時間。你可以按下按鈕查看不同天的詳細安排。</p></div><img class="itinerary-photo" src="assets/tokyo-three-days.jpg" alt="遠眺富士山與東京高樓的城市景觀照片"></section>
+    <section class="section section-soft" id="day-picker"><div class="shell">
+      <p class="eyebrow">INTERACTIVE FEATURE 01</p><h2>點選日期，切換行程</h2>
+      <div class="day-buttons" aria-label="選擇行程日期">
+        <button type="button" class="btn active" data-day="1" aria-pressed="true">第 1 天</button>
+        <button type="button" class="btn btn-outline" data-day="2" aria-pressed="false">第 2 天</button>
+        <button type="button" class="btn btn-outline" data-day="3" aria-pressed="false">第 3 天</button>
+      </div>
+      <div class="day-panel" data-day-panel="1"><span class="number">DAY 01 / OLD TOKYO</span><h3>淺草 → 上野</h3><p>第一天先感受東京傳統街區，晚上到上野周邊吃飯、散步。</p><ol class="timeline"><li><strong>上午</strong>淺草寺、雷門與仲見世商店街</li><li><strong>下午</strong>上野公園或附近的博物館</li><li><strong>晚上</strong>阿美橫町散步、自由用餐</li></ol></div>
+      <div class="day-panel" data-day-panel="2" hidden><span class="number">DAY 02 / POP TOKYO</span><h3>明治神宮 → 原宿 → 澀谷</h3><p>第二天主要探索東京西側的街區，從綠意走到熱鬧商圈。</p><ol class="timeline"><li><strong>上午</strong>明治神宮散步</li><li><strong>下午</strong>原宿竹下通與表參道周邊</li><li><strong>晚上</strong>澀谷十字路口、逛街</li></ol></div>
+      <div class="day-panel" data-day-panel="3" hidden><span class="number">DAY 03 / CITY VIEW</span><h3>築地場外市場 → 銀座 → 東京鐵塔</h3><p>第三天安排美食、商圈與城市地標，為旅行留下美好的收尾。</p><ol class="timeline"><li><strong>上午</strong>築地場外市場吃早餐</li><li><strong>下午</strong>銀座逛街或喝咖啡</li><li><strong>晚上</strong>東京鐵塔周邊拍照</li></ol></div>
+    </div></section>
+    <section class="section shell"><h2>三天行程總覽</h2><div class="table-scroll"><table>
+      <caption>三天自由行建議表（可依自己的興趣調整）</caption>
+      <thead><tr><th>日期</th><th>上午</th><th>下午</th><th>晚上</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Day 1</th><td>淺草寺</td><td>上野公園</td><td>阿美橫町</td></tr>
+        <tr><th scope="row">Day 2</th><td>明治神宮</td><td>原宿</td><td>澀谷</td></tr>
+        <tr><th scope="row">Day 3</th><td>築地場外市場</td><td>銀座</td><td>東京鐵塔</td></tr>
+      </tbody>
+    </table></div>
+    <p class="muted">這是示範行程，不包含交通班次與景點營業時間。可參考 <a href="https://www.gotokyo.org/en/story/walks-and-tours/best-of-tokyo/index.html" target="_blank" rel="noopener noreferrer">GO TOKYO 三天行程</a>。</p></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><a href="budget.html">下一步：試算旅行預算 →</a></div></footer>
+</body>
+</html>

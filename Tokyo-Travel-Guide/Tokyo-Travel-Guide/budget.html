@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="東京旅費試算工具：輸入人數、天數、每日餐飲、交通等預估費用。">
+  <title>飯店與預算 | 東京輕旅行指南</title>
+  <link rel="stylesheet" href="css/style.css"><script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="shell nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">T</span> TOKYO GUIDE <small>我的東京輕旅行指南</small></a>
+    <nav aria-label="主要導覽"><ul class="nav-links">
+      <li><a href="index.html">首頁</a></li><li><a href="spots.html">推薦景點</a></li><li><a href="itinerary.html">三日行程</a></li><li><a class="active" aria-current="page" href="budget.html">飯店與預算</a></li>
+    </ul></nav>
+  </div></header>
+  <main>
+    <section class="page-intro shell"><div><p class="eyebrow">HOTEL &amp; BUDGET</p><h1>飯店與旅費試算</h1><p>選飯店時可以留意交通方便程度與每晚住宿費。出發前先抓一個預算，再輸入人數、天數與費用，就能算出預估總額。</p></div><img class="hotel-photo" src="assets/tokyo-hotel.jpg" alt="東京高樓飯店建築外觀照片"></section>
+    <section class="section section-soft"><div class="shell budget-layout">
+      <div class="panel">
+        <p class="eyebrow">INTERACTIVE FEATURE 02</p><h2>計算你的預算</h2>
+        <p class="muted">單位：日圓（JPY）。預設金額僅是練習用的範例估算，不代表即時售價。</p>
+        <form id="budget-form">
+          <div class="form-grid">
+            <div class="field"><label for="days">旅遊天數</label><input id="days" type="number" min="1" max="30" step="1" value="3" required></div>
+            <div class="field"><label for="people">旅遊人數</label><input id="people" type="number" min="1" max="30" step="1" value="2" required></div>
+            <div class="field"><label for="hotel">每人每晚住宿費（¥）</label><input id="hotel" type="number" min="0" step="100" value="7000" required></div>
+            <div class="field"><label for="food">每人每天餐飲費（¥）</label><input id="food" type="number" min="0" step="100" value="3000" required></div>
+            <div class="field"><label for="transport">每人每天交通費（¥）</label><input id="transport" type="number" min="0" step="100" value="1200" required></div>
+            <div class="field"><label for="ticket">每人每天景點費（¥）</label><input id="ticket" type="number" min="0" step="100" value="1500" required></div>
+          </div>
+          <button class="btn full" type="submit">計算預算</button>
+          <p id="budget-error" class="form-error" role="alert"></p>
+        </form>
+      </div>
+      <div class="panel" aria-live="polite">
+        <span class="number">ESTIMATED TOTAL</span><h2>預估總花費</h2>
+        <div id="total" class="estimate">¥ --</div>
+        <ul class="result-detail">
+          <li>住宿：<strong id="hotel-total">--</strong></li>
+          <li>餐飲：<strong id="food-total">--</strong></li>
+          <li>交通：<strong id="transport-total">--</strong></li>
+          <li>景點：<strong id="ticket-total">--</strong></li>
+        </ul>
+        <p class="muted" id="budget-note">住宿按「旅遊天數 - 1 晚」計算，其他項目按每日計算。</p>
+        <p class="muted">試算未包含機票、購物、保險及匯率變動。</p>
+      </div>
+    </div></section>
+    <section class="section shell"><h2>飯店住宿小提醒</h2>
+      <ul class="tip-list"><li>先確認飯店離車站的距離，減少搬行李的麻煩。</li><li>看清楚訂房的入住、退房時間和取消規定。</li><li>同一區域可以比較幾間飯店，再依預算選擇。</li></ul>
+      <h2>交通費怎麼估？</h2>
+      <div class="notice"><p>東京有多種鐵路和地鐵票券，是否划算要看你的行程路線。可先查看 <a href="https://www.tokyometro.jp/en/ticket/travel/index.html" target="_blank" rel="noopener noreferrer">Tokyo Metro 東京地鐵票券官方說明</a>，再把預算填進上方計算器。</p></div>
+      <ul class="tip-list"><li>不必將每一天排滿，留一點休息時間。</li><li>住宿、餐費、門票會依日期和個人習慣改變。</li><li>先把必要花費估出來，再決定購物預算。</li></ul>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><a href="index.html">回到首頁</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="淺草寺雷門插畫">
+  <rect width="720" height="420" fill="#f9dfcf"/>
+  <circle cx="592" cy="74" r="48" fill="#f7c9a8"/>
+  <path d="M70 186 L360 95 650 186 615 215 105 215 Z" fill="#2c4350"/>
+  <path d="M133 208 L590 208 590 360 133 360 Z" fill="#be5654"/>
+  <rect x="171" y="216" width="47" height="144" fill="#e7c1ab"/>
+  <rect x="503" y="216" width="47" height="144" fill="#e7c1ab"/>
+  <path d="M115 240 L605 240" stroke="#7a3439" stroke-width="16"/>
+  <rect x="274" y="217" width="170" height="145" fill="#fbeeda"/>
+  <rect x="288" y="230" width="143" height="132" fill="#2d4755"/>
+  <path d="M304 236 Q360 212 416 236 L406 314 Q360 342 315 314 Z" fill="#bb4a4d" stroke="#8c3135" stroke-width="6"/>
+  <path d="M327 255 H395 M329 281 H393 M334 307 H386" stroke="#edaaa0" stroke-width="6"/>
+  <rect x="91" y="357" width="539" height="25" fill="#aa5a53"/>
+  <rect y="382" width="720" height="38" fill="#344a56"/>
+  <text x="26" y="407" font-family="Arial,sans-serif" font-size="19" font-weight="bold" fill="#fff" letter-spacing="2">ASAKUSA</text>
+</svg>

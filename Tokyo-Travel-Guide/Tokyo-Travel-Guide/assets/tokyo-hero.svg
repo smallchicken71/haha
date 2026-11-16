@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="580" viewBox="0 0 900 580" role="img" aria-label="東京城市與東京鐵塔插畫">
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f8c6b8"/><stop offset="1" stop-color="#fff1d7"/></linearGradient></defs>
+  <rect width="900" height="580" fill="url(#sky)"/>
+  <circle cx="672" cy="146" r="77" fill="#f7e3a3"/>
+  <g fill="#f5b8aa" opacity=".8"><circle cx="100" cy="94" r="25"/><circle cx="142" cy="69" r="23"/><circle cx="170" cy="113" r="24"/><circle cx="776" cy="72" r="21"/><circle cx="819" cy="93" r="27"/><circle cx="844" cy="53" r="20"/></g>
+  <path d="M0 448 L0 312 95 312 95 257 165 257 165 335 223 335 223 280 330 280 330 374 430 374 430 300 502 300 502 349 611 349 611 269 691 269 691 336 771 336 771 281 900 281 900 580 0 580 Z" fill="#91a9b1"/>
+  <path d="M0 489 L0 388 107 388 107 350 192 350 192 421 300 421 300 351 381 351 381 406 501 406 501 349 581 349 581 417 675 417 675 377 761 377 761 433 900 433 900 580 0 580 Z" fill="#526c7b"/>
+  <g fill="#e8d5ba" opacity=".8"><rect x="45" y="424" width="17" height="23"/><rect x="79" y="424" width="17" height="23"/><rect x="145" y="383" width="15" height="20"/><rect x="344" y="387" width="14" height="18"/><rect x="532" y="377" width="14" height="18"/><rect x="717" y="407" width="15" height="20"/><rect x="819" y="457" width="17" height="23"/></g>
+  <g stroke="#b74d50" stroke-width="16" stroke-linejoin="round" fill="none"><path d="M337 504 L452 161 L566 504"/><path d="M372 401 L531 401 M397 319 L507 319 M423 244 L481 244"/><path d="M375 401 L532 319 M532 401 L397 319 M397 319 L482 244 M507 319 L423 244"/></g>
+  <path d="M428 161 L476 161 L465 126 L438 126 Z M445 125 L459 125 L454 92 Z" fill="#b74d50"/>
+  <path d="M313 502 L588 502 L568 527 L333 527 Z" fill="#e7e2d5"/>
+  <rect y="532" width="900" height="48" fill="#273f4e"/>
+  <text x="37" y="552" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#fff0de" letter-spacing="4">TOKYO DAYS</text>
+</svg>
